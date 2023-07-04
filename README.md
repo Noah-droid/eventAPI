@@ -2,7 +2,7 @@
 
 The Event Management API is a Django-based application that provides a RESTful API for managing events and user authentication. This API allows users to create, view, update, and delete events, as well as register and authenticate users.
 
-This was designed for the # Trebelle API Hackathon
+This was designed for the #Treblle API Hackathon
 
 ## Features
 
