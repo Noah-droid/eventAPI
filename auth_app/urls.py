@@ -1,5 +1,5 @@
 from django.urls import path
-from auth import views
+from auth_app import views
 
 urlpatterns = [
     path('api/register/', views.UserCreateView.as_view(), name='user-register'),
