@@ -15,7 +15,7 @@ This was designed for the # Trebelle API Hackathon
 
 ## Requirements
 
-- Python 3.9
+- Python 3.8 and above
 - Django 4.2.3
 - Django Rest Framework 3.14.0
 - Treblle (refer to documentation for installation instructions)
