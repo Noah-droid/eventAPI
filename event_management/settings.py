@@ -138,3 +138,17 @@ REST_FRAMEWORK = {
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ],
 }
+
+CACHES = {
+    'default': {
+        'BACKEND': 'django_redis.cache.RedisCache',
+        'LOCATION': 'redis://localhost:6379/1',
+        'OPTIONS': {
+            'CLIENT_CLASS': 'django_redis.client.DefaultClient',
+        }
+    }
+}
+
+RATELIMIT_ENABLE = True
+RATELIMIT_VIEW = 'rest_framework.limits.AnonRateThrottle'
+RATELIMIT_CACHE_PREFIX = 'rl'

@@ -7,12 +7,17 @@ from rest_framework.permissions import IsAuthenticatedOrReadOnly, IsAuthenticate
 # from rest_framework_simplejwt.authentication import JWTAuthentication
 from django.shortcuts import redirect
 from rest_framework.response import Response
+from rest_framework.throttling import UserRateThrottle
+
+
 
 class EventViewSet(viewsets.ModelViewSet):
     allowed_methods = ['GET', 'POST']
     queryset = Event.objects.all()
     serializer_class = EventSerializer
     permission_classes = [IsAuthenticated]
+    throttle_classes = [UserRateThrottle]
+
     
     # def dispatch(self, request, *args, **kwargs):
     #     if not request.user.is_authenticated:
@@ -55,6 +60,8 @@ class EventViewSet(viewsets.ModelViewSet):
 
 class EventAttendeesViewSet(viewsets.ViewSet):
     allowed_methods = ['GET', 'POST']
+    throttle_classes = [UserRateThrottle]
+
     def list(self, request, event_id=None):
         event = Event.objects.get(id=event_id)
         attendees = event.attendees.all()
@@ -65,6 +72,8 @@ class EventAttendeesViewSet(viewsets.ViewSet):
     
 class EventSearchViewSet(viewsets.ViewSet):
     allowed_methods = ['GET', 'POST']
+    throttle_classes = [UserRateThrottle]
+
     def list(self, request):
         date = request.GET.get('date')
         location = request.GET.get('venue')
