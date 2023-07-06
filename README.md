@@ -26,24 +26,23 @@ This was designed for the #Treblle API Hackathon
 
 git clone "https://github.com/Noah-droid/eventAPI.git"
 
-
 2. Install the required dependencies:
    
 pip install -r requirements.txt
-
 
 3. Run database migrations:
 
 python manage.py migrate
 
-
 4. Start the development server:
 
 python manage.py runserver
 
-
-
 5. Access the API at `http://localhost:8000/`.
+
+6. Account Details
+username: admin
+password: 123
 
 ## API Endpoints
 
@@ -59,13 +58,7 @@ python manage.py runserver
 - `GET /api/events/<id>/`: Retrieve details of a specific event.
 - `PUT /api/events/<id>/`: Update details of a specific event.
 - `DELETE /api/events/<id>/`: Delete a specific event.
-- `SEARCH /api/events/search/`: Search a specific event.
-- `ATTENDEES /api/events/<event_id>/attendees/`: Attendees of a particular event.
-
-Note: `<id>` should be replaced with the UUID of the event.
-
-We have a total of 5 endpoints for the event API hackathon:
-## Event List, Create, Retrieve, Update, and Delete endpoint:
+- Event List, Create, Retrieve, Update, and Delete endpoint:
 URL: api/events/
 Methods: GET, POST, PUT, PATCH, DELETE
 
@@ -77,25 +70,13 @@ Methods: GET
 URL: api/events/search/
 Methods: GET
 
-## User Registration endpoint:
-URL: api/register/
-Methods: POST
-
-## Token Obtain Pair endpoint (Authentication):
-URL: api/token/
-Methods: POST
-
-## You can now send POST requests to:
 ##  RSVP for an event:
 URL: api/events/<event_id>/rsvp/ 
 Methods: POST
+
 ## create comments for an event:
 URL: api/events/<event_id>/comments/
 Methods: POST
-
-## Account Details
-username: admin
-password: 123
 
 
 ## Authentication and Authorization
