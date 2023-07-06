@@ -66,19 +66,19 @@ Note: `<id>` should be replaced with the UUID of the event.
 
 
 ## Event Attendees endpoint:
-URL: api/events/<event_id>/attendees/
+URL: `api/events/<event_id>/attendees/`
 Methods: GET
 
 ## Event Search endpoint:
-URL: api/events/search/
+URL: `api/events/search/`
 Methods: GET
 
 ##  RSVP for an event:
-URL: api/events/<uuid:event_id>/rsvp/ 
+URL: `api/events/<uuid:event_id>/rsvp/` 
 Methods: POST
 
 ## create comments for an event:
-URL: api/events/<uuid:event_id>/comments/
+URL: `api/events/<uuid:event_id>/comments/`
 Methods: POST
 
 
