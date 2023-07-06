@@ -59,8 +59,32 @@ python manage.py runserver
 - `GET /api/events/<id>/`: Retrieve details of a specific event.
 - `PUT /api/events/<id>/`: Update details of a specific event.
 - `DELETE /api/events/<id>/`: Delete a specific event.
+- `SEARCH /api/events/search/`: Search a specific event.
+- `ATTENDEES /api/events/<event_id>/attendees/`: Attendees of a particular event.
 
 Note: `<id>` should be replaced with the UUID of the event.
+
+We have a total of 5 endpoints for the event API hackathon:
+## Event List, Create, Retrieve, Update, and Delete endpoint:
+URL: api/events/
+Methods: GET, POST, PUT, PATCH, DELETE
+
+## Event Attendees endpoint:
+URL: api/events/<event_id>/attendees/
+Methods: GET
+
+## Event Search endpoint:
+URL: api/events/search/
+Methods: GET
+
+## User Registration endpoint:
+URL: api/register/
+Methods: POST
+
+## Token Obtain Pair endpoint (Authentication):
+URL: api/token/
+Methods: POST
+These endpoints cover the basic functionalities required for the event API and provide the necessary functionality for creating, retrieving, updating, and deleting events, as well as retrieving event attendees and searching events.
 
 ## Authentication and Authorization
 
