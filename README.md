@@ -84,7 +84,6 @@ Methods: POST
 ## Token Obtain Pair endpoint (Authentication):
 URL: api/token/
 Methods: POST
-These endpoints cover the basic functionalities required for the event API and provide the necessary functionality for creating, retrieving, updating, and deleting events, as well as retrieving event attendees and searching events.
 
 ## Authentication and Authorization
 
