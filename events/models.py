@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from auth_app.models import User
 import uuid
 from django.utils import timezone
+from django.contrib.auth import get_user_model
 
 class Venue(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
@@ -30,3 +31,14 @@ class Event(models.Model):
         return self.attendees.count()
 
 
+User = get_user_model()
+
+class Comment(models.Model):
+    event = models.ForeignKey(Event, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    text = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.text
