@@ -62,6 +62,9 @@ password: 123
 URL: api/events/
 Methods: GET, POST, PUT, PATCH, DELETE
 
+Note: `<id>` should be replaced with the UUID of the event.
+
+
 ## Event Attendees endpoint:
 URL: api/events/<event_id>/attendees/
 Methods: GET
