@@ -59,7 +59,7 @@ class EventViewSet(viewsets.ModelViewSet):
 
 
 class EventAttendeesViewSet(viewsets.ViewSet):
-    allowed_methods = ['GET', 'POST']
+    allowed_methods = ['GET']
     throttle_classes = [UserRateThrottle]
 
     def list(self, request, event_id=None):
@@ -71,7 +71,7 @@ class EventAttendeesViewSet(viewsets.ViewSet):
         return Response(serializer.data)
     
 class EventSearchViewSet(viewsets.ViewSet):
-    allowed_methods = ['GET', 'POST']
+    allowed_methods = ['GET']
     throttle_classes = [UserRateThrottle]
 
     def list(self, request):
