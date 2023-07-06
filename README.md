@@ -74,11 +74,11 @@ URL: api/events/search/
 Methods: GET
 
 ##  RSVP for an event:
-URL: api/events/<event_id>/rsvp/ 
+URL: api/events/<uuid:event_id>/rsvp/ 
 Methods: POST
 
 ## create comments for an event:
-URL: api/events/<event_id>/comments/
+URL: api/events/<uuid:event_id>/comments/
 Methods: POST
 
 
