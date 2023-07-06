@@ -12,7 +12,7 @@ from rest_framework.throttling import UserRateThrottle
 
 
 class EventViewSet(viewsets.ModelViewSet):
-    allowed_methods = ['GET', 'POST']
+    allowed_methods = ['GET', 'POST', 'PUT', 'DELETE']
     queryset = Event.objects.all()
     serializer_class = EventSerializer
     permission_classes = [IsAuthenticated]
