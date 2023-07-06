@@ -7,6 +7,7 @@ from rest_framework.response import Response
 from rest_framework import status
 
 class UserCreateView(generics.CreateAPIView):
+    allowed_methods = ['GET', 'POST']
     queryset = User.objects.all()
     serializer_class = UserSerializer
     permission_classes = [AllowAny]

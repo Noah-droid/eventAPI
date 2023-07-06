@@ -9,6 +9,7 @@ from django.shortcuts import redirect
 from rest_framework.response import Response
 
 class EventViewSet(viewsets.ModelViewSet):
+    allowed_methods = ['GET', 'POST']
     queryset = Event.objects.all()
     serializer_class = EventSerializer
     permission_classes = [IsAuthenticated]
@@ -17,7 +18,7 @@ class EventViewSet(viewsets.ModelViewSet):
     #     if not request.user.is_authenticated:
     #         return redirect('/auth/api/token/')  
     #     return super().dispatch(request, *args, **kwargs)
-    
+
     @action(detail=True, methods=['post'])
     def rsvp(self, request, pk=None):
         event = self.get_object()
@@ -53,6 +54,7 @@ class EventViewSet(viewsets.ModelViewSet):
 
 
 class EventAttendeesViewSet(viewsets.ViewSet):
+    allowed_methods = ['GET', 'POST']
     def list(self, request, event_id=None):
         event = Event.objects.get(id=event_id)
         attendees = event.attendees.all()
@@ -62,6 +64,7 @@ class EventAttendeesViewSet(viewsets.ViewSet):
         return Response(serializer.data)
     
 class EventSearchViewSet(viewsets.ViewSet):
+    allowed_methods = ['GET', 'POST']
     def list(self, request):
         date = request.GET.get('date')
         location = request.GET.get('venue')
