@@ -85,6 +85,11 @@ Methods: POST
 URL: api/token/
 Methods: POST
 
+## Account Details
+username: admin
+password: 123
+
+
 ## Authentication and Authorization
 
 - The API endpoints for event management require authentication. Include the access token received from the `/api/token/` endpoint in the Authorization header of each request.
