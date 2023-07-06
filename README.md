@@ -60,7 +60,7 @@ password: 123
 - `DELETE /api/events/<id>/`: Delete a specific event.
 - Event List, Create, Retrieve, Update, and Delete endpoint:
 URL: api/events/
-Methods: GET, POST, PUT, PATCH, DELETE
+Methods: GET, POST, PUT, DELETE
 
 Note: `<id>` should be replaced with the UUID of the event.
 
