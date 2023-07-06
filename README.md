@@ -85,6 +85,14 @@ Methods: POST
 URL: api/token/
 Methods: POST
 
+## You can now send POST requests to:
+##  RSVP for an event:
+URL: api/events/<event_id>/rsvp/ 
+Methods: POST
+## create comments for an event:
+URL: api/events/<event_id>/comments/
+Methods: POST
+
 ## Account Details
 username: admin
 password: 123
