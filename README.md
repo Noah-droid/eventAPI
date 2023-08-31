@@ -7,7 +7,7 @@ This was designed for the #Treblle API Hackathon
 ## Features
 
 - User registration and authentication.
-- Event creation, retrieval, updating, and deletion
+- Event creation, retrieval, updating, and deletion.
 - Authentication and authorization for protected endpoints
 - Integration with Django Rest Framework for API development
 - Use of UUIDs instead of IDs for models
