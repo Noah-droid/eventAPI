@@ -9,7 +9,7 @@ This was designed for the #Treblle API Hackathon
 - User registration and authentication.
 - Event creation, retrieval, updating, and deletion.
 - Authentication and authorization for protected endpoints.
-- Integration with Django Rest Framework for API development
+- Integration with Django Rest Framework for API development.
 - Use of UUIDs instead of IDs for models
 - Rate limiting, input validation, and logging using Treblle (refer to documentation for specific implementation)
 
